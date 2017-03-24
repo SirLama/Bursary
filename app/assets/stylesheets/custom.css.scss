@@ -1,5 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body {
+    background-image: url('BG.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 60px;
+
+}
 /* header */
 #logo {
     float: left;
@@ -17,3 +24,31 @@
     text-decoration: none;
 
 }
+/* universal */
+section {
+    overflow: auto;
+
+}
+textarea {
+    resize: vertical;
+
+}
+.center {
+    text-align: center;
+
+}
+.center h1 {
+    margin-bottom: 10px;
+
+}
+.row {
+    background:#fff;
+}
+footer p {
+    margin: 0;
+    padding: 50px 0;
+}
+.footer{
+    padding-top: 60px;
+}
+
