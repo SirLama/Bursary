@@ -1,11 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body {
-    background-image: url('BG.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     padding-top: 60px;
-
 }
 /* header */
 #logo {
@@ -25,30 +21,28 @@ body {
 
 }
 /* universal */
-section {
-    overflow: auto;
-
-}
 textarea {
     resize: vertical;
-
-}
-.center {
-    text-align: center;
-
-}
-.center h1 {
-    margin-bottom: 10px;
 
 }
 .row {
     background:#fff;
 }
-footer p {
-    margin: 0;
-    padding: 50px 0;
+footer, header{
+    background-image:url('index.jpeg');
 }
-.footer{
-    padding-top: 60px;
+footer{
+    height: 190px;
+    color:#fff;
+    text-align: center;
+    padding-top: 15px;
 }
-
+/* forms */
+input ,textarea, select, .uneditable-input{
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+}
+#errors{
+    color: red;
+}
