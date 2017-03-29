@@ -10,7 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325185316) do
+ActiveRecord::Schema.define(version: 20170329111310) do
+
+  create_table "bersaries", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.string   "m_name"
+    t.string   "id_no"
+    t.string   "telephone"
+    t.string   "gender"
+    t.string   "work"
+    t.string   "county"
+    t.string   "school"
+    t.string   "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_bersaries_on_user_id"
+  end
+
+  create_table "loans", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "mname"
+    t.string   "id_no"
+    t.string   "telephone"
+    t.string   "gender"
+    t.string   "work"
+    t.string   "county"
+    t.string   "school"
+    t.string   "amount"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_loans_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
