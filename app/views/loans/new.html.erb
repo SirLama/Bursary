@@ -1,2 +1,28 @@
-<h1>Loans#new</h1>
-<p>Find me in app/views/loans/new.html.erb</p>
+<% provide(:title, "Apply") %>
+<h1>Application Form</h1>
+<div class="row">
+        <%= form_for(@loan) do |f| %>
+            <%= f.label :Sirname %>
+            <%= f.text_field :fname, class:'form-control' %>
+             <%= f.label :Lastname%>
+            <%= f.text_field :lname, class:'form-control' %>
+             <%= f.label :Other %>
+            <%= f.text_field :mname, class:'form-control' %>
+             <%= f.label :ID %>
+            <%= f.text_field :id_no, class:'form-control' %>
+             <%= f.label :Telephone %>
+            <%= f.text_field :telephone, class:'form-control' %>
+             <%= f.label :GEnder %>
+            <%= f.text_field :gender, class:'form-control' %>
+             <%= f.label :Employed? %>
+            <%= f.text_field :work, class:'form-control' %>
+             <%= f.label :County %>
+            <%= f.text_field :county, class:'form-control' %>
+             <%= f.label :Institution %>
+            <%= f.text_field :school, class:'form-control' %>
+             <%= f.label :Amount %>
+            <%= f.text_field :amount, class:'form-control' %>
+             <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+
