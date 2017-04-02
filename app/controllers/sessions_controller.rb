@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       flash[:success] = "Hi #{user.name}, welcome to the Bursary App!"
+      if user.admin?
+        redirect_to loans_path
+      else
       redirect_to user
+      end
     else
       flash.now[:danger]='Invalid email/password combination'
       render 'new'

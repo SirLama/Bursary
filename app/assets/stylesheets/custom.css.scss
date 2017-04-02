@@ -1,7 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body {
+    background-image: url('bd.jpg');
     padding-top: 60px;
+    color:#fff;
 }
 /* header */
 #logo {
@@ -32,9 +34,9 @@ textarea {
     resize: vertical;
 
 }
-.row {
-    background:#fff;
-}
+// .row {
+//     background:#fff;
+// }
 #errors{
     color: red;
 }
