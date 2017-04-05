@@ -3,13 +3,18 @@
 <html>
     <head>
         <title><%= yield(:title)  %> | Bursey Application</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="row">
+        <div class="jumbotron">
+            <div class="container-fluid">
                 <div class="col-lg-12">
-                    <h2 class="intro-text text-center">Revolutionary Online bursary allocation</h2>
-                    <p>Welcome to the bursery allocation system.This web application is meant to help kids achieve their dreams by supporting them in the most conventional way,financial support.Applicants are required to provide their forms fully filled as required</p>
+                    <%= image_tag 'g3.jpeg', title: "Bursery" %>
+                    <h1><small>Online Bursery App</small></h1>
+                    <p><small>This is the most efficient way to receive education funds.
+                        Once you sign up with the online bursery allocation system,you are
+                        entitled to apply for a bursary.Follow ups can be done so as t ensure
+                        our applicants enjoyed the benefits.</small></p>
                 </div>
             </div>
         </div>

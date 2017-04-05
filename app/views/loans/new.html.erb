@@ -1,7 +1,8 @@
 <% provide(:title, "Apply") %>
 <h1>Application Form</h1>
 <div class="row">
-        <%= form_for(@loan) do |f| %>
+    <%= form_for(@loan) do |f| %>
+        <ul>
             <%= f.label :Sirname %>
             <%= f.text_field :fname, class:'form-control' %>
              <%= f.label :Lastname%>
@@ -15,7 +16,7 @@
              <%= f.label :Gender %>
             <%= f.text_field :gender, class:'form-control' %>
              <%= f.label :Are_you_employed? %>
-            <%= f.check_box :work, class:'form-control' %>
+            <%= f.text_field :work, class:'form-control' %>
              <%= f.label :County %>
             <%= f.text_field :county, class:'form-control' %>
              <%= f.label :Institution %>
@@ -23,6 +24,7 @@
              <%= f.label :Amount %>
             <%= f.text_field :amount, class:'form-control' %>
              <%= f.submit "Submit", class: "btn btn-primary" %>
-        <% end %>
+         <% end %>
+        </ul>
     </div>
 
