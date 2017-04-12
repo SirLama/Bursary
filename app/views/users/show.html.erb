@@ -1,5 +1,9 @@
 <% provide(:title, "Profile")%>
 <h1>Personal Details</h1>
+<br>
 <table class="table">
-    <tr><%= @user.name.capitalize %></tr>
-    
+    <tr><th>First Name </th>
+        <td><%= @user.name %></td></tr>
+    <tr><th>Email </th>
+        <td><%= @user.email %></td></tr>
+</table>

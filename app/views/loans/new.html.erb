@@ -4,27 +4,27 @@
     <%= form_for(@loan) do |f| %>
         <ul>
             <%= f.label :Sirname %>
-            <%= f.text_field :fname, class:'form-control' %>
-             <%= f.label :Lastname%>
-            <%= f.text_field :lname, class:'form-control' %>
-             <%= f.label :Other %>
-            <%= f.text_field :mname, class:'form-control' %>
-             <%= f.label :ID %>
-            <%= f.text_field :id_no, class:'form-control' %>
-             <%= f.label :Telephone %>
-            <%= f.text_field :telephone, class:'form-control' %>
-             <%= f.label :Gender %>
+            <%= f.text_field :fname, placeholder: 'Sir name', class:'form-control' %>
+            <%= f.label :Lastname%>
+            <%= f.text_field :lname, placeholder: 'Last name', class:'form-control' %>
+            <%= f.label :Other %>
+            <%= f.text_field :mname, placeholder: 'Other name',  class:'form-control' %>
+            <%= f.label :ID %>
+            <%= f.text_field :id_no, placeholder: 'Id number', class:'form-control' %>
+            <%= f.label :Telephone %>
+            <%= f.text_field :telephone, placeholder: 'Telephone number', class:'form-control' %>
+            <%= f.label :Gender %>
             <%= f.text_field :gender, class:'form-control' %>
-             <%= f.label :Are_you_employed? %>
+            <%= f.label :Are_you_employed? %>
             <%= f.text_field :work, class:'form-control' %>
-             <%= f.label :County %>
-            <%= f.text_field :county, class:'form-control' %>
-             <%= f.label :Institution %>
+            <%= f.label :County %>
+            <%= f.select :county, options_for_select( [["Nairobi"],["Mombasa"],["Kakamega"],["Bomet"],["Vihiga"],["Homabay"], ["Kisumu"]]), { :include_blank => "Please select your county" }, {:class => "form-control"}%>
+            <%= f.label :Institution %>
             <%= f.text_field :school, class:'form-control' %>
-             <%= f.label :Amount %>
-            <%= f.text_field :amount, class:'form-control' %>
-             <%= f.submit "Submit", class: "btn btn-primary" %>
-         <% end %>
+            <%= f.label :Amount %>
+            <%= f.text_field :amount,placeholder:'', class:'form-control' %>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
         </ul>
-    </div>
+</div>
 
