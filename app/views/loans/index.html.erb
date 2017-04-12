@@ -14,6 +14,27 @@
         <td><%= loan.amount%></td>
         <td><%= loan.created_at%></td>
         <td><%= loan.school%></td>
+        <td><%= link_to 'Accept', accept_path(loan_id:loan.id, status:'accepted'), class: 'btn btn-primary'%></td>
+        <td><%= link_to 'Reject', loan, method: :delete, class: 'btn btn-primary'%></td>
+    </tr>
+<% end %>
+</table>
+<br>
+<h1>List of Accepted bursery requests</h1>
+<table class="table"><tr>
+        <th>ID</th>
+        <th>Applicant name</th>
+        <th>Amount requested</th>
+        <th>Date applied</th>
+        <th>School</th>
+    </tr>
+<% @bursary.each do |loan|%>
+    <tr>
+        <td><%= loan.id%></td>
+        <td><%= loan.user.name%></td>
+        <td><%= loan.amount%></td>
+        <td><%= loan.created_at%></td>
+        <td><%= loan.school%></td>
     </tr>
 <% end %>
 </table>
