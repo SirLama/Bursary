@@ -7,3 +7,10 @@
     <tr><th>Email </th>
         <td><%= @user.email %></td></tr>
 </table>
+<%if @user.loans.any?%>
+    <% @user.loans.each do |loan| %>
+        <p><b>  Your loan for <%= loan.school %> of <%= loan.amount %>
+        status is <%= loan.status %></b></p>
+
+    <% end %>
+<% end %>
